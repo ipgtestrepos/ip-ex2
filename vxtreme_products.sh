@@ -58,6 +58,9 @@ for entry in "${vxtremedirs[@]}"; do
         ipg prod add --delta
         ipg prod commit --release ${rev} --quiet
     done
+
+    cd ${TOP}
+    rm -rf $repo
 done
 IFS="$saveIFS"
 
